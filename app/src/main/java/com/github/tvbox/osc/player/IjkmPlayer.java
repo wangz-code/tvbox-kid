@@ -65,6 +65,7 @@ public class IjkmPlayer extends IjkPlayer {
     @Override
     public void setDataSource(String path, Map<String, String> headers) {
         try {
+            System.out.println("urlPath:"+path);
             if (path != null && !TextUtils.isEmpty(path)) {
                 if(path.startsWith("rtsp")){
                     mMediaPlayer.setOption(1, "infbuf", 1);

@@ -356,7 +356,28 @@ public class ApiConfig {
         livePlayHeaders = infoJson.getAsJsonArray("livePlayHeaders");
         // 远端站点源
         SourceBean firstSite = null;
-        JsonArray sites = infoJson.has("video") ? infoJson.getAsJsonObject("video").getAsJsonArray("sites") : infoJson.get("sites").getAsJsonArray();
+//        JsonArray sites = infoJson.has("video") ? infoJson.getAsJsonObject("video").getAsJsonArray("sites") : infoJson.get("sites").getAsJsonArray();
+
+
+
+
+        JsonArray  sites = new JsonArray();
+        // 添加 JSONObject
+        JsonObject siteObj = new JsonObject();
+
+        String jStr = "{" +
+                "\"key\": \"艾迪\"," +
+                "\"name\": \"艾迪艾迪\"," +
+                "\"type\": \"3\"," +
+                "\"api\": \"csp_Aidi\"," +
+                "\"playerType\": \"1\"," +
+                "\"ext\": \"7lj763gg09397919456493i0h44j8681highi4\"" +
+                "}";
+        Gson gson = new Gson();
+        JsonObject jsonObject = gson.fromJson(jStr, JsonObject.class);
+        sites.add(jsonObject);
+        System.out.print("sites"+sites);
+
         for (JsonElement opt : sites) {
             JsonObject obj = (JsonObject) opt;
             SourceBean sb = new SourceBean();

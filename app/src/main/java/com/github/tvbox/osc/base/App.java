@@ -147,6 +147,8 @@ public class App extends MultiDexApplication {
         putDefault(HawkConfig.PARSE_WEBVIEW, true);          //嗅探Webview: true=系统自带, false=XWalkView
         putDefault(HawkConfig.DOH_URL, 0);                   //安全DNS: 0=关闭, 1=腾讯, 2=阿里, 3=360, 4=Google, 5=AdGuard, 6=Quad9
 
+        System.out.println("Hawk:"+Hawk.get(HawkConfig.PLAY_TYPE));
+
     }
 
     private void initLocale() {
