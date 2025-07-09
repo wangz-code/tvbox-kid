@@ -1,2 +1,2 @@
-# tv-box-kid
-计划增加儿童保护, 避免尴尬的 澳门葡京 xxxx
+# tvbox-kid 基于 [tang99](https://github.com/takagen99/Box)
+
