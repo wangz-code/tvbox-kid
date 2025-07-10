@@ -42,7 +42,13 @@ tvbox 本身是一个空壳, 通过加载第三方人编写的jar, jar 包内这
 
 
 
+## 项目中有M3U8净化   后续可以直接在这个方法修改
+
+```java
+// app/src/main/java/com/github/tvbox/osc/util/M3U8.java
+RemoteServer.m3u8Content = M3U8.purify(finalforwardurl.substring(0, ilast + 1), content);
 
 
+```
 
 
